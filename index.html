@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css"/> 
+    <link href="js/unitegallery/css/unite-gallery.css" rel="stylesheet">
+    <link href="js/unitegallery/themes/default/ug-theme-default.css" rel="stylesheet">
+    <link rel="stylesheet" href="js/owlcarousel/owl.carousel.css">
+    <link rel="stylesheet" href="js/owlcarousel/owl.theme.default.css">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <title>KI-401 Onysko Lab5</title>
+</head>
+<body>
+    <main>
+        <h1>Лабораторна Робота №5</h1>
+        <div class="elements">
+            <div class="content">
+                <div class="box p">
+                    <h2>jQuery UI Datepicker:</h2>
+                    <p>Оберіть дату: <input type="text" id="datepicker"></p>
+                </div>
+                <div class="break"></div>
+                <div class="box">
+                    <h2>jQuery UI Accordion:</h2>
+                    <div id="accordion">
+                        <h3>Секція 1</h3>
+                        <div class="acc-open">
+                            <p>Ви розгорнули секцію 1.</p>
+                        </div>
+                        <h3>Секція 2</h3>
+                        <div class="acc-open">
+                            <p>Ви розгорнули секцію 2.</p>
+                        </div>
+                        <h3>Секція 3</h3>
+                        <div class="acc-open">
+                            <p>Ви розгорнули секцію 3.</p>
+                        </div>
+                        <h3>Секція 4</h3>
+                        <div class="acc-open">
+                            <p>Ви розгорнули секцію 4.</p>
+                        </div>
+                        <h3>Секція 5</h3>
+                        <div class="acc-open">
+                            <p>Ви розгорнули секцію 5.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slider">
+                <h2>jQuery UI Slider:</h2>
+                <div id="slider"></div>
+            </div>
+        </div>
+        <br>
+        <div class="second">
+        <div class="photos">
+            <div id="galleryTiles" style="display:none;">	
+                <img alt="Image 1 Title" src="materials/images/1.png"
+                data-image="materials/images/1.png">
+
+                <img alt="Image 2 Title" src="materials/images/2.png"
+                data-image="materials/images/2.png">
+
+                <img alt="Image 3 Title" src="materials/images/3.png"
+                data-image="materials/images/3.png">
+
+                <img alt="Image 4 Title" src="materials/images/4.png"
+                data-image="materials/images/4.png">
+            </div>
+        </div>
+        
+        <div class="owl-carousel owl-theme owl">				
+            <div><img src="materials/images/1.png"></div>
+            <div><img src="materials/images/2.png"></div>
+            <div><img src="materials/images/3.png"></div>
+            <div><img src="materials/images/4.png"></div>
+        </div>
+        </div>
+    </main>
+    <footer>@2024 Лабораторна робота №4. Всі права захищені</footer>
+    <script src="js/jquery-3.7.1.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <script>
+        $( function() {
+          $( "#datepicker" ).datepicker();
+        } );
+    </script>
+    <script>
+        $( function() {
+          $( "#accordion" ).accordion();
+        } );
+    </script>
+     <script>
+        $( function() {
+          $( "#slider" ).slider();
+        } );
+    </script>
+    <script src="js/unitegallery/js/unitegallery.js"></script>
+    <script src="js/unitegallery/themes/tiles/ug-theme-tiles.js" type="text/javascript"></script>
+    <script>
+
+        jQuery(document).ready(function(){
+    
+            jQuery("#galleryTiles").unitegallery({
+                tile_enable_border:true,
+                gallery_theme: "tiles",
+                tile_border_color:"#112D4E",
+                tile_border_width:4,
+                tile_border_radius:8,
+                tiles_type: "nested"
+    
+            });
+    
+        });
+    </script>
+    <script src="js/owlcarousel/owl.carousel.js"> </script>
+    <script>
+            $(document).ready(function(){
+                $(".owl-carousel").owlCarousel({
+                    loop:true,
+                    items:1,
+                    center:true,
+                    autoplay:true,
+                    autoplayTimeout:2000
+                });
+            });
+    </script>
+</body>
+</html>
